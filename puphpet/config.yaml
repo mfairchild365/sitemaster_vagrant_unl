@@ -5,10 +5,10 @@ vagrantfile-local:
         box_url: 'http://box.puphpet.com/centos64-x64-vbox43.box'
         hostname: null
         network:
-            private_network: 192.168.56.201
+            private_network: 192.168.56.203
             forwarded_port:
                 g0C9AFAAwVR9:
-                    host: '8001'
+                    host: '8003'
                     guest: '80'
         provider:
             virtualbox:
@@ -28,7 +28,7 @@ vagrantfile-local:
         synced_folder:
             0OUuei9okTNJ:
                 id: vagrant-root
-                source: ./../../
+                source: sitemaster
                 target: /var/www/html
                 nfs: 'false'
         usable_port_range: 2200..2250
