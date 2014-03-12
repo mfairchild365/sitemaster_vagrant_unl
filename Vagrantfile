@@ -1,5 +1,9 @@
 require 'yaml'
 
+if (!File.exist?(File.join(File.dirname(__FILE__), 'sitemaster')))
+    Dir.mkdir File.join(File.dirname(__FILE__), 'sitemaster')
+end
+
 dir = File.dirname(File.expand_path(__FILE__))
 
 configValues = YAML.load_file("#{dir}/puphpet/config.yaml")
