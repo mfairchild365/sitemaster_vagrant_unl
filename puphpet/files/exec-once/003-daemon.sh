@@ -1,5 +1,7 @@
-SITEMASTER_BASEDIR="/var/www/html"
+SITEMASTER_BASEDIR="/var/www/html/sitemaster"
 SITEMASTER_INSTALL="scripts/install.php"
+SCRIPT="`readlink -e $0`"
+SCRIPTPATH="`dirname $SCRIPT`"
 
-sudo cp ${SITEMASTER_BASEDIR}/scripts/example-upstart.conf /etc/init/sitemaster.conf
+sudo cp ${SCRIPTPATH}/data/example-upstart.conf /etc/init/sitemaster.conf
 sudo start sitemaster

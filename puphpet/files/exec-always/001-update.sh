@@ -1,4 +1,4 @@
-SITEMASTER_BASEDIR="/var/www/html"
+SITEMASTER_BASEDIR="/var/www/html/sitemaster"
 SITEMASTER_UPDATE="scripts/update.php"
 SITEMASTER_UPDATE_LIBS="scripts/update_libs.php"
 
