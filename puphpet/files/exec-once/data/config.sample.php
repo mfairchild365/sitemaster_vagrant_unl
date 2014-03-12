@@ -22,16 +22,30 @@ Config::set('DB_NAME'     , 'sitemaster');
 /**********************************************************************************************************************
  * Other settings, including theme
  */
-Config::set('THEME', 'foundation');
+Config::set('THEME', 'unl');
 
 
 /**********************************************************************************************************************
  * Plugin related settings
  */
 Config::set('PLUGINS', array(
-  'example' => array('setting'=>'value'),
-  'theme_foundation' => array('setting'=>'value'),
-  'auth_google' => array('setting'=>'value'),
+    //'example' => array('setting'=>'value'),
+    //'theme_foundation' => array('setting'=>'value'),
+    //'auth_google' => array('setting'=>'value'),
+    'theme_unl' => array(),
+    'auth_unl' => array(),
+    'unl' => array(
+        'weight' => 40,
+    ),
+    'metric_links' => array(
+        'weight' => 20,
+    ),
+    'metric_w3c_html' => array(
+        'weight' => 20,
+    ),
+    'metric_pa11y' => array(
+        'weight' => 20,
+    ),
 ));
 
 /**********************************************************************************************************************
