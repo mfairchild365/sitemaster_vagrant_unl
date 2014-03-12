@@ -1,7 +1,11 @@
 require 'yaml'
 
-if (!File.exist?(File.join(File.dirname(__FILE__), 'sitemaster')))
-    Dir.mkdir File.join(File.dirname(__FILE__), 'sitemaster')
+if (!File.exist?(File.join(File.dirname(__FILE__), 'server')))
+    Dir.mkdir File.join(File.dirname(__FILE__), 'server')
+end
+
+if (!File.exist?(File.join(File.dirname(__FILE__), 'server/sitemaster')))
+    Dir.mkdir File.join(File.dirname(__FILE__), 'server/sitemaster')
 end
 
 dir = File.dirname(File.expand_path(__FILE__))

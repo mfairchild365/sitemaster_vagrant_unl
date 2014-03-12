@@ -28,7 +28,7 @@ vagrantfile-local:
         synced_folder:
             0OUuei9okTNJ:
                 id: vagrant-root
-                source: sitemaster
+                source: server
                 target: /var/www/html
                 nfs: 'false'
         usable_port_range: 2200..2250
@@ -75,7 +75,7 @@ apache:
                 - 'APP_ENV dev'
             override:
                 - All
-            custom_fragment: 'EnableSendFile Off'
+            custom_fragment: "EnableSendFile Off\r\nAlias /phpmyadmin /var/www/html/phpmyadmin\r\nAlias /sitemaster /var/www/html/sitemaster\r\nRewriteEngine on\r\nRewriteRule   ^/$  /sitemaster/  [R]"
     user: www-data
     group: www-data
     default_vhost: true
