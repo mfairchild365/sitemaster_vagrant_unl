@@ -45,7 +45,8 @@ vagrantfile-local:
     vagrant:
         host: detect
 server:
-    packages: {  }
+    packages:
+        - npm
     dot_files:
         -
             bash_aliases: null
